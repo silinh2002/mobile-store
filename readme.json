@@ -28,8 +28,8 @@
       "CRUD": true,
       "FindByLamda(id/name/phone...)": true,
       "search fulltext": false,
-      "productType": false,
-      "saveCart": false
+      "productType": true,
+      "saveCart-session": false
     },
     "Authentication-Header-JWT": false
   }
