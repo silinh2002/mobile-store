@@ -1,0 +1,36 @@
+{
+  "BACKEND": {
+    "users": {
+      "viewProfile": true,
+      "CRUD": true,
+      "FindByLamda(id/name/phone...)": true,
+      "search fulltext": false,
+      "login": true,
+      "logout": false,
+      "admin": {
+        "createUser": true,
+        "deleteUser": true,
+        "updateUser": true,
+        "createProduct": true,
+        "deleteProduct": true,
+        "updateProduct": true
+      },
+      "staff": {
+        "createProduct": true,
+        "deleteProduct": true,
+        "updateProduct": true
+      },
+      "customer": {
+        "buyProduct": true
+      }
+    },
+    "products": {
+      "CRUD": true,
+      "FindByLamda(id/name/phone...)": true,
+      "search fulltext": false,
+      "productType": false,
+      "saveCart": false
+    },
+    "Authentication-Header-JWT": false
+  }
+}
