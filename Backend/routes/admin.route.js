@@ -16,5 +16,5 @@ router.delete("/Users/:id", controller.deleteUser);
 
 router.post("/Products", controller.postCreateProduct);
 router.patch("/Products/:id", controller.postUpdateProduct);
-router.delete("/Products/:id", controller.deleteProduct);
+router.delete("/Products/:id", controller.postUpdateProduct);
 module.exports = router;
