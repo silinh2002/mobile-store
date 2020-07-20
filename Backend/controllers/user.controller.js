@@ -15,7 +15,7 @@ module.exports = {
     var users = await User.findByLamda();
     res.json(users);
   },
-  find: async function (req, res) {
+  findById: async function (req, res) {
     var id = req.params.id;
     var users = await User.findByLamda({ _id: id });
     res.json(users[0]);

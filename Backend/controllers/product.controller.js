@@ -1,14 +1,14 @@
 var Product = require("../models/product.model");
 
 module.exports = {
-  find: async function (req, res) {
+  findById: async function (req, res) {
     var id = req.params.id;
     var users = await Product.findByLamda({ _id: id });
     res.json(users);
   },
   listProduct: async function (req, res) {
     var page = parseInt(req.query.page) || 1;
-    var perPage = 3;
+    var perPage = 4;
     var start = (page - 1) * perPage;
     var end = page * perPage;
     var products = await Product.findByLamda();

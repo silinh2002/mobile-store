@@ -4,14 +4,17 @@ const router = express.Router();
 var controller = require("../controllers/admin.controller");
 
 router.get("/", controller.index);
-router.get("/list", controller.listUser);
-router.get("/:id", controller.find);
+router.get("/Users", controller.listUser);
+router.get("/Users/:id", controller.findUser);
 
-router.post("/createUser", controller.postCreateUser);
-router.post("/updateUser/:id", controller.postUpdateUser);
-router.post("/deleteUser/:id", controller.deleteUser);
+router.get("/Users", controller.listProducts);
+router.get("/Users/:id", controller.findProduct);
 
-router.post("/createProduct", controller.postCreateProduct);
-router.post("/updateProduct/:id", controller.postUpdateProduct);
-router.post("/deleteProduct/:id", controller.deleteProduct);
+router.post("/Users", controller.postCreateUser);
+router.patch("/Users/:id", controller.postUpdateUser);
+router.delete("/Users/:id", controller.deleteUser);
+
+router.post("/Products", controller.postCreateProduct);
+router.patch("/Products/:id", controller.postUpdateProduct);
+router.delete("/Products/:id", controller.deleteProduct);
 module.exports = router;

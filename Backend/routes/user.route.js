@@ -5,7 +5,7 @@ var controller = require("../controllers/user.controller");
 
 router.get("/", controller.index);
 router.get("/list", controller.listUser);
-router.get("/:id", controller.find);
+router.get("/:id", controller.findById);
 
 router.post("/create", controller.postCreate);
 router.post("/create", controller.postCreate);

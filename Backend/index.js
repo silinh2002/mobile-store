@@ -26,9 +26,9 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 app.use(cookieParser("abcxyzasdsadasd"));
 app.get("/", (req, res) => res.send("Hello World!"));
 
-app.use("/user", authMiddleware.requireAuth, userRoutes);
-app.use("/product", productRoutes);
-app.use("/order", orderRoutes);
+app.use("/users", authMiddleware.requireAuth, userRoutes);
+app.use("/products", productRoutes);
+app.use("/orders", orderRoutes);
 app.use("/auth", authRoutes);
 
 app.use("/admin", authMiddleware.requireAuth, adminRoute);
