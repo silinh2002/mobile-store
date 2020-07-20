@@ -23,6 +23,7 @@ module.exports = {
       deliveryDate: req.body.deliveryDate,
       receiptDate: req.body.receiptDate,
       status: "delivery",
+      isDeleted: true,
     };
     try {
       await Order.createByLamda(entity);
