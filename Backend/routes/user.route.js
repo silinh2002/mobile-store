@@ -8,7 +8,7 @@ router.get("/list", controller.listUser);
 router.get("/:id", controller.findById);
 
 router.post("/create", controller.postCreate);
-router.post("/create", controller.postCreate);
+router.post("/update", controller.postUpdate);
 router.post("/changepassword", controller.postChangePassword);
 router.post("/delete/:id", controller.delete);
 module.exports = router;
