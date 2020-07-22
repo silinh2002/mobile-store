@@ -9,8 +9,15 @@ var cookieParser = require("cookie-parser");
 var mongoose = require("mongoose");
 
 console.log(process.env.MONGO_URL);
-mongoose.connect(process.env.MONGO_URL);
-
+mongoose
+  .connect(process.env.MONGO_URL_LOCAL, {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+  })
+  .then(() => console.log("DB Connected!"))
+  .catch((err) => {
+    console.log(`DB Connection Error: ${err.message}`);
+  });
 var productRoutes = require("./routes/product.route");
 var userRoutes = require("./routes/user.route");
 var authRoutes = require("./routes/auth.route");
