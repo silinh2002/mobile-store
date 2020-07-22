@@ -4,8 +4,11 @@ const router = express.Router();
 var controller = require("../controllers/staff.controller");
 
 router.get("/", controller.index);
-router.get("/list", controller.listUser);
-router.get("/:id", controller.findById);
+router.get("/Users", controller.listUser);
+router.get("/Users/:id", controller.findById);
+
+router.get("/Products", controller.listProducts);
+router.get("/Products/:id", controller.findProduct);
 
 router.post("/", controller.postCreateProduct);
 router.patch("/:id", controller.postUpdateProduct);
