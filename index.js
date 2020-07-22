@@ -10,7 +10,7 @@ var mongoose = require("mongoose");
 
 console.log(process.env.MONGO_URL);
 mongoose
-  .connect(process.env.MONGO_URL_LOCAL, {
+  .connect(process.env.MONGO_URL, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
   })
